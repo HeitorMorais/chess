@@ -28,6 +28,7 @@ function populateBoard(board: Board, color: "white" | "black"){
         const pawn : Piece = {
         type: "pawn",
         color: color,
+        hasMoved: false,
         position: {x: pawnRows, y: i}
         }
         board.squares[pawnRows][i] = pawn    
@@ -38,6 +39,7 @@ function populateBoard(board: Board, color: "white" | "black"){
         const rook : Piece = {
             type: "rook",
             color: color,
+            hasMoved: false,
             position: {x: row, y: i}
         }
         board.squares[row][i] = rook
@@ -48,6 +50,7 @@ function populateBoard(board: Board, color: "white" | "black"){
         const knight : Piece = {
             type: "knight",
             color: color,
+            hasMoved: false,
             position: {x: row, y: i}
         }
         board.squares[row][i] = knight
@@ -58,6 +61,7 @@ function populateBoard(board: Board, color: "white" | "black"){
         const bishop: Piece = {
             type: "bishop",
             color: color,
+            hasMoved: false,
             position: {x: row, y: i}
         }
         board.squares[row][i] = bishop
@@ -67,6 +71,7 @@ function populateBoard(board: Board, color: "white" | "black"){
     const queen : Piece = {
         type: "queen",
         color: color,
+        hasMoved: false,
         position: {x: row, y: 3}
     }
     board.squares[row][3] = queen
@@ -75,6 +80,7 @@ function populateBoard(board: Board, color: "white" | "black"){
     const king : Piece = {
         type: "king",
         color: color,
+        hasMoved: false,
         position: {x: row, y: 4}
     }
     board.squares[row][4] = king
