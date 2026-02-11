@@ -7,18 +7,18 @@ export function initializeBoard(){
     }
     populateBoard(board, "white")
     populateBoard(board, "black")
-
-    console.log("INICIALIZANDO TABULEIRO -----")
-    console.log(board.squares)
-    console.log("MOVENDO ------")
-    const piece = board.squares[6][0]
-    if(piece) {
-        console.log("movendo: ", piece)
-        moveTo(board, piece, {x: 5, y: 0})
+    //testes
+    let seeBoard : string | undefined = ""
+    for(let i=0; i<8; i++){
+        for(let j=0; j<8; j++){
+            seeBoard += ` ${board.squares[i][j]?.type}`
+        }
+        seeBoard += '\n'
     }
-    console.log(board.squares)
+    console.log(seeBoard)
+    
 }
-
+initializeBoard()
 function populateBoard(board: Board, color: "white" | "black"){
     // populate paws
     const row : number = color == "white" ? 7 : 0
